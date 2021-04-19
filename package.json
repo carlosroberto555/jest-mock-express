@@ -1,0 +1,18 @@
+{
+  "name": "jest-mock-express",
+  "version": "1.0.0",
+  "description": "Express mocking library for Jest",
+  "main": "index.js",
+  "author": "Carlos Roberto",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.22"
+  }
+}
