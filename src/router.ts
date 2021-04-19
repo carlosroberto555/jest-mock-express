@@ -1,3 +1,5 @@
+import { Router } from "express";
+
 import MockRequest from "./request";
 import MockResponse from "./response";
 
@@ -15,7 +17,7 @@ class MockRouter {
   req: MockRequest;
   res: MockResponse;
 
-  constructor(private router) {
+  constructor(private router: Router) {
     this.req = new MockRequest();
     this.res = new MockResponse();
   }
@@ -79,7 +81,7 @@ class MockRouter {
     }
   }
 
-  *matches(method: Method, url: string, stack) {
+  *matches(method: Method, url: string, stack: Router["stack"]) {
     const mtd = method.toLowerCase();
 
     for (const layer of stack) {

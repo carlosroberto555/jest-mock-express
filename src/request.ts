@@ -1,9 +1,9 @@
 export default class MockRequest {
-  method: string = null;
-  headers: {};
-  params: {};
-  query: {};
-  body: {};
+  method: string = "get";
+  headers: Record<string, string>;
+  params: Record<string, string>;
+  query: Record<string, string>;
+  body: Record<string, string>;
   header: jest.Mock<any, any>;
 
   constructor() {
