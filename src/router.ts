@@ -93,7 +93,7 @@ class MockRouter {
     }
   }
 
-  *matches(method: Method, url: string, stack: Router["stack"]) {
+  private *matches(method: Method, url: string, stack: Router["stack"]) {
     const mtd = method.toLowerCase();
 
     for (const layer of stack) {
