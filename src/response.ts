@@ -1,4 +1,4 @@
-export default class MockResponse {
+class MockResponse {
   status: jest.Mock<any, any>;
   send: jest.Mock<any, any>;
   json: jest.Mock<any, any>;
@@ -18,3 +18,5 @@ export default class MockResponse {
     this.end.mockClear();
   }
 }
+
+export default MockResponse;

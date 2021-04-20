@@ -1,4 +1,4 @@
-export default class MockRequest {
+class MockRequest {
   method: string = "get";
   headers: Record<string, string>;
   params: Record<string, string>;
@@ -22,3 +22,5 @@ export default class MockRequest {
     this.header.mockClear();
   }
 }
+
+export default MockRequest;
