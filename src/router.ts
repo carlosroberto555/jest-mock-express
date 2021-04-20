@@ -48,11 +48,11 @@ class MockRouter {
     return this;
   }
 
-  query(key: string, value: string) {
-    if (typeof key === "string") {
+  query(key: string | Record<string, string>, value?: string) {
+    if (typeof key === "string" && value) {
       this.req.query[key] = value;
     } else {
-      this.req.query = key;
+      this.req.query = key as Record<string, string>;
     }
 
     return this;
@@ -63,8 +63,20 @@ class MockRouter {
     return this;
   }
 
+  get(url: string) {
+    return this.request("get", url);
+  }
+
+  put(url: string) {
+    return this.request("put", url);
+  }
+
   post(url: string) {
     return this.request("post", url);
+  }
+
+  delete(url: string) {
+    return this.request("delete", url);
   }
 
   async request(method: Method, url: string) {

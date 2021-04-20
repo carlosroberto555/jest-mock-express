@@ -10,8 +10,9 @@
     "removeComments": true,
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
-    "sourceMap": true
-  }
+    "sourceMap": true, 
+  },
+  "include": ["src/**/*"],
 }
