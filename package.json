@@ -1,6 +1,6 @@
 {
   "name": "@carlosrpj/jest-mock-express",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Express mocking library for Jest",
   "main": "dist/index.js",
   "author": "Carlos Roberto",
